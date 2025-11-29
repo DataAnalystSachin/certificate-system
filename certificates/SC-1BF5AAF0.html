@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Certificate - Sachin Jangir</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin:0;
+    padding:0;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top,#111827,#020617,#000000);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#e5e7eb;
+}
+.container {
+    width:95%;
+    max-width:960px;
+    padding:18px;
+}
+.card {
+    background: rgba(15,23,42,0.92);
+    border-radius:22px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.7);
+    border:1px solid rgba(148,163,184,0.45);
+    padding:24px 22px 20px 22px;
+}
+.header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:14px;
+}
+.title-main {
+    font-size:22px;
+    font-weight:600;
+}
+.badge {
+    font-size:11px;
+    padding:4px 10px;
+    border-radius:999px;
+    background:rgba(34,197,94,0.12);
+    color:#bbf7d0;
+    border:1px solid rgba(34,197,94,0.7);
+}
+.sub {
+    font-size:13px;
+    color:#94a3b8;
+    margin-bottom:16px;
+}
+.preview {
+    background:#020617;
+    border-radius:16px;
+    border:1px solid rgba(30,64,175,0.6);
+    overflow:hidden;
+    margin-bottom:18px;
+}
+.preview img {
+    width:100%;
+    display:block;
+    object-fit:contain;
+    max-height:600px;
+}
+.buttons {
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.btn {
+    flex:1 1 170px;
+    text-align:center;
+    font-size:14px;
+    padding:10px 16px;
+    border-radius:999px;
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+    font-weight:500;
+    transition:all 0.18s ease-out;
+}
+.btn-pdf { background:linear-gradient(135deg,#22c55e,#16a34a); color:#ecfdf5; }
+.btn-png { background:linear-gradient(135deg,#3b82f6,#2563eb); color:#eff6ff; }
+.btn-copy{ background:linear-gradient(135deg,#facc15,#eab308); color:#111827; }
+.btn-wa  { background:linear-gradient(135deg,#22c55e,#16a34a); color:#ecfdf5; }
+.btn:hover {
+    transform:translateY(-2px);
+    filter:brightness(1.08);
+}
+.footer {
+    margin-top:12px;
+    font-size:12px;
+    color:#9ca3af;
+    text-align:right;
+}
+@media(max-width:640px){
+    .card{ padding:18px; }
+    .header{ flex-direction:column; align-items:flex-start; gap:6px; }
+    .footer{ text-align:left; }
+}
+</style>
+
+<script>
+function copyLink(){
+    navigator.clipboard.writeText("https://dataanalystsachin.github.io/certificate-system/certificates/SC-1BF5AAF0.html")
+    .then(function(){ alert("🔗 Certificate link copied!"); })
+    .catch(function(){ alert("Could not copy link"); });
+}
+</script>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="header">
+      <div>
+        <div class="title-main">Certificate Viewer</div>
+        <div class="sub">Issued to <b>Sachin Jangir</b> • Certificate ID: <b>SC-1BF5AAF0</b></div>
+      </div>
+      <div class="badge">Verified Certificate</div>
+    </div>
+
+    <div class="preview">
+      <img src="https://dataanalystsachin.github.io/certificate-system/certificates/pdf/SC-1BF5AAF0.pdf" alt="Certificate Preview">
+    </div>
+
+    <div class="buttons">
+      <a class="btn btn-pdf" href="https://dataanalystsachin.github.io/certificate-system/certificates/pdf/SC-1BF5AAF0.pdf" download>📄 Download PDF</a>
+      <a class="btn btn-png" href="https://dataanalystsachin.github.io/certificate-system/certificates/pdf/SC-1BF5AAF0.pdf" download>🖼 Download PNG</a>
+      <button class="btn btn-copy" onclick="copyLink()">🔗 Copy Share Link</button>
+      <a class="btn btn-wa" target="_blank"
+         href="https://wa.me/?text=Here%20is%20my%20certificate:%20https://dataanalystsachin.github.io/certificate-system/certificates/SC-1BF5AAF0.html">🟢 Share on WhatsApp</a>
+    </div>
+
+    <div class="footer">
+      Scan the QR code on your certificate or share this page with others.
+    </div>
+  </div>
+</div>
+</body>
+</html>
