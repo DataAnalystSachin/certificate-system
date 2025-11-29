@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Certificate - Sachin Jangir</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    margin:0; padding:0;
+    font-family: sans-serif;
+    background: radial-gradient(circle at top,#111827,#020617,#000000);
+    min-height:100vh;
+    display:flex; align-items:center; justify-content:center;
+    color:#e5e7eb;
+}
+.container { width:95%; max-width:960px; padding:18px; }
+.card {
+    background: rgba(15,23,42,0.92);
+    border-radius:22px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.7);
+    border:1px solid rgba(148,163,184,0.45);
+    padding:24px;
+}
+.header { display:flex; justify-content:space-between; margin-bottom:14px; }
+.title-main { font-size:22px; font-weight:600; }
+.badge { font-size:11px; padding:4px 10px; border-radius:999px; background:rgba(34,197,94,0.12); color:#bbf7d0; border:1px solid rgba(34,197,94,0.7); height:fit-content; }
+.sub { font-size:13px; color:#94a3b8; margin-bottom:16px; }
+.preview {
+    background:#020617;
+    border-radius:16px;
+    border:1px solid rgba(30,64,175,0.6);
+    overflow:hidden;
+    margin-bottom:18px;
+    text-align: center;
+}
+.preview img { width:100%; display:block; object-fit:contain; }
+.buttons { display:flex; flex-wrap:wrap; gap:10px; }
+.btn {
+    flex:1 1 170px; text-align:center; font-size:14px; padding:10px 16px;
+    border-radius:999px; text-decoration:none; font-weight:500; cursor:pointer; color:white;
+}
+.btn-pdf { background:linear-gradient(135deg,#22c55e,#16a34a); }
+.btn-png { background:linear-gradient(135deg,#3b82f6,#2563eb); }
+.btn-copy{ background:linear-gradient(135deg,#facc15,#eab308); color:black; border:none; }
+.btn-wa  { background:linear-gradient(135deg,#25D366,#128C7E); }
+</style>
+<script>
+function copyLink(){
+    navigator.clipboard.writeText("https://dataanalystsachin.github.io/certificate-system/certificates/SC-48A7E579.html").then(()=>alert("Link Copied!"));
+}
+</script>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="header">
+      <div>
+        <div class="title-main">Certificate Viewer</div>
+        <div class="sub">Issued to <b>Sachin Jangir</b> • ID: <b>SC-48A7E579</b></div>
+      </div>
+      <div class="badge">Verified</div>
+    </div>
+
+    <!-- PREVIEW AREA: Shows Image if available, else PDF Embed -->
+    <div class="preview">
+      <embed src="https://dataanalystsachin.github.io/certificate-system/certificates/pdf/SC-48A7E579.pdf" type="application/pdf" width="100%" height="600px" />
+    </div>
+
+    <div class="buttons">
+      <a class="btn btn-pdf" href="https://dataanalystsachin.github.io/certificate-system/certificates/pdf/SC-48A7E579.pdf" download>📄 Download PDF</a>
+      
+      <button class="btn btn-copy" onclick="copyLink()">🔗 Copy Link</button>
+      <a class="btn btn-wa" target="_blank" href="https://wa.me/?text=My%20Certificate:%20https://dataanalystsachin.github.io/certificate-system/certificates/SC-48A7E579.html">🟢 WhatsApp</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
