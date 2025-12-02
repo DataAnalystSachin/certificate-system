@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Certificate | Deepak Jangir</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+            --accent-blue: #2563eb;
+            --accent-hover: #1d4ed8;
+            --linkedin: #0077b5;
+            --whatsapp: #25D366;
+            --sachin-color: #7c3aed; 
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-main);
+        }
+
+        .dash-btn {
+            background: #ffffff;
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .dash-btn:hover { background: #f1f5f9; }
+
+        /* Info Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .card-info {
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            word-break: break-word;
+        }
+
+        /* Certificate Preview */
+        .cert-container {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .cert-img {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* PDF Fallback Container for Mobile */
+        .pdf-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 70%; /* Aspect Ratio */
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .pdf-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Action Buttons */
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btn {
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.2s ease;
+            min-width: 160px;
+        }
+
+        .btn:hover { transform: translateY(-2px); filter: brightness(110%); }
+        .btn:active { transform: scale(0.98); }
+
+        .btn-img { background: var(--accent-blue); }
+        .btn-pdf { background: #475569; }
+        .btn-li { background: var(--linkedin); }
+        .btn-wa { background: var(--whatsapp); }
+        .btn-sachin { background: var(--sachin-color); }
+
+        /* ================= MOBILE RESPONSIVE CSS ================= */
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+                display: block; /* Removes vertical centering to allow scrolling */
+            }
+            
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .dash-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .grid {
+                grid-template-columns: 1fr; /* Stack info cards vertically */
+            }
+            
+            .cert-container {
+                padding: 16px;
+            }
+
+            .actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%; /* Full width buttons on mobile */
+                padding: 16px; /* Larger touch target */
+            }
+            
+            /* Hide PDF embed on very small screens if needed, strictly prefer Image */
+            .pdf-container {
+                padding-bottom: 125%; /* Taller aspect ratio for phones */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Header -->
+        <div class="header">
+            <div class="brand">
+                <i class="fas fa-certificate" style="color: var(--accent-blue);"></i> 
+                Skill Course
+            </div>
+            <a href="#" class="dash-btn"><i class="fas fa-chevron-left"></i> Back to Dashboard</a>
+        </div>
+
+        <!-- Info Cards -->
+        <div class="grid">
+            <div class="card-info">
+                <span class="label">Student Name</span>
+                <div class="value">Deepak Jangir</div>
+            </div>
+            <div class="card-info">
+                <span class="label">Course Name</span>
+                <div class="value">Data Analytics Master Class</div>
+            </div>
+            <div class="card-info">
+                <span class="label">Issue Date</span>
+                <div class="value">02 Dec 2025</div>
+            </div>
+            <div class="card-info">
+                <span class="label">Certificate ID</span>
+                <div class="value" style="font-family: monospace;">SC-364FC750</div>
+            </div>
+        </div>
+
+        <!-- Certificate Preview & Actions -->
+        <div class="cert-container">
+            <img src="https://dataanalystsachin.github.io/certificate-system/certificates/png/SC-364FC750.png" alt="Certificate Preview" class="cert-img">
+            
+            <div class="actions">
+                <a href="https://dataanalystsachin.github.io/certificate-system/certificates/png/SC-364FC750.png" download="SC-364FC750.png" class="btn btn-img"><i class="fas fa-download"></i> Download Image</a>
+                <a href="https://dataanalystsachin.github.io/certificate-system/certificates/pdf/SC-364FC750.pdf" class="btn btn-pdf" download="SC-364FC750.pdf">
+                    <i class="fas fa-file-pdf"></i> Download PDF
+                </a>
+                <a href="https://wa.me/?text=%F0%9F%8E%93%20I%20just%20completed%20the%20Data%20Analytics%20Master%20Class%21%20Check%20out%20my%20certificate%20here%3A%20https%3A//dataanalystsachin.github.io/certificate-system/certificates/SC-364FC750.html" target="_blank" class="btn btn-wa">
+                    <i class="fab fa-whatsapp"></i> Share Status
+                </a>
+                <a href="https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=Data+Analytics+Master+Class&organizationName=Skill+Course&issueYear=2025&issueMonth=12&certId=SC-364FC750&certUrl=https%3A%2F%2Fdataanalystsachin.github.io%2Fcertificate-system%2Fcertificates%2FSC-364FC750.html" target="_blank" class="btn btn-li">
+                    <i class="fab fa-linkedin"></i> Add to LinkedIn
+                </a>
+                <a href="https://dataanalystsachin.github.io/sachinjangir.com/" target="_blank" class="btn btn-sachin">
+                    <i class="fas fa-user-tie"></i> About Creator
+                </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+        
